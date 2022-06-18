@@ -1,15 +1,17 @@
+import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
+import MusicPlayer from '../music-player/music-player.component';
 import SideNavbar from '../side-navbar/side-navbar.component';
 import TopNavbar from '../top-navbar/top-navbar.component';
-import './navigation.styles.scss';
 
 const Navigation = () => {
     return (
-        <nav className="pl-10 pr-10 navigation-container bg-transparent">
+        <Fragment>
             <TopNavbar />
             <SideNavbar />
             <Outlet />
-        </nav>
+            <MusicPlayer />
+        </Fragment>
     )
 }
 

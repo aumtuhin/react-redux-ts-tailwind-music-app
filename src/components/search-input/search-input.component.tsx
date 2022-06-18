@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Input = () => {
+const SearchInput = () => {
   return (
     <div className="relative cursor-text">
         <span className="absolute inset-y-0 flex items-center left-0 pl-4">
@@ -15,4 +15,4 @@ const Input = () => {
   )
 }
 
-export default Input;
+export default SearchInput;

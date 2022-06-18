@@ -1,25 +1,16 @@
-import './top-navbar.styles.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/logo.png';
-import Input from '../input/input.component';
+import SearchInput from '../search-input/search-input.component';
+import ToggleButton from '../toggle-button/toggle-button.component';
 
 const TopNavbar = () => {
-
-  const [isDark, setIsdark] = useState<boolean>(false);
-
   return (
-    <div className='top-navbar-container flex justify-between items-center h-28 outline-none'>
-      <Link to="/" ><img className="h-20" src={logo} alt="logo" /></Link>
-      <Input />
-      <div className="" >
-        <button onClick={() => setIsdark(!isDark)}>
-          {isDark && <FontAwesomeIcon className="h-8 text-slate-500" icon={faToggleOff} />}
-          {!isDark && <FontAwesomeIcon className="h-8 text-slate-500" icon={faToggleOn} />}
-        </button>
+    <div className='fixed top-0 w-screen h-24 overflow-hidden z-10 bg-white'>
+      <div className="pl-10 pr-10 h-full w-full  flex justify-between items-center">
+        <Link to="/" ><img className="h-20" src={logo} alt="logo" /></Link>
+        <SearchInput />
+        <ToggleButton />
       </div>
     </div>
   )
