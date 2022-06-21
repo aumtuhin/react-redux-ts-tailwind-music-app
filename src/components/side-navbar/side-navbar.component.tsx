@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faHome, faMusic, faChartArea, faFeed, faStar, } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faHome, faMusic, faChartArea, faStar, } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const SideNavbar = () => {
@@ -14,9 +14,6 @@ const SideNavbar = () => {
                 </li>
                 <li className="m-4 mt-10">
                     <Link to="/trends"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faChartArea} /></Link >
-                </li>
-                <li className="m-4 mt-10">
-                    <Link to="/feed"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faFeed} /></Link >
                 </li>
                 <li className="m-4 mt-10">
                     <Link to="/saved-albums"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faStar} /></Link >

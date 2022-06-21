@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { Song } from '../../shared/interfaces';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../../state';
 
 const SongCard: React.FC<{ song: Song }> = ({ song }) => {
+  const dispatch = useDispatch();
+  const { setLikedSongs } = bindActionCreators(actionCreators, dispatch);
   return (
     <div className='h-56 w-56 transform transition duration-500 hover:scale-110'>
       <div
@@ -10,6 +15,7 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
         className="bg-no-repeat bg-cover h-full w-full rounded-lg cursor-pointer"
       >
         <FontAwesomeIcon
+          onClick={() => setLikedSongs(song)}
           className='
            absolute 
           text-white

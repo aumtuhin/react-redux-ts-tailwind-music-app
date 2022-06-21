@@ -1,6 +1,5 @@
 import ContentGroup from '../../components/content-group/content-group.component';
 import { SongGroup } from '../../shared/interfaces';
-
 import { data } from '../../shared/mockData';
 
 const Home = () => {
