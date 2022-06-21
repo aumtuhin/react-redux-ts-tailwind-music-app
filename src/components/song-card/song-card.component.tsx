@@ -2,25 +2,46 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { Song } from '../../shared/interfaces';
 
-const SongCard: React.FC<{song: Song}> = ({song}) => {
+const SongCard: React.FC<{ song: Song }> = ({ song }) => {
   return (
-    <div className='h-56 w-56 m-4'>
+    <div className='h-56 w-56 transform transition duration-500 hover:scale-110'>
       <div
         style={{ backgroundImage: `url(${song.thumb})` }}
-        className="bg-no-repeat bg-cover h-full w-full rounded-lg cursor-pointer relative"
+        className="bg-no-repeat bg-cover h-full w-full rounded-lg cursor-pointer"
       >
         <FontAwesomeIcon
-          className='absolute text-white h-7 m-2 items-center justify-center transition ease-in-out delay-500 hover:h-14  hover:scale-11 duration-700'
-          icon={faHeart} />
-        <div className='absolute flex items-center justify-center m-auto w-full h-full'>
+          className='
+           absolute 
+          text-white
+           h-7 m-2 
+           transition 
+           ease-in-in
+           ease-in-out  
+           delay-500 hover:h-8  
+           hover:scale-3
+           duration-700
+           z-10'
+          icon={faHeart}
+        />
+        <div className='absolute flex items-center justify-center w-full h-full'>
           <FontAwesomeIcon
-            className='text-white h-10 items-center justify-center transition ease-in-out delay-500 hover:h-14  hover:scale-11 duration-700'
+            className='text-white 
+            h-10 items-center 
+            justify-center 
+            transition 
+            ease-in-out 
+            delay-500 hover:h-14  
+            hover:scale-11 
+            duration-700'
             icon={faPlayCircle}
           />
         </div>
       </div>
-      <h4 className='text-slate-500' >{song.name}</h4>
-      <p className='text-slate-500' >{song.singer} <span className=' text-slate-900 font-bold'>{song.views}</span> </p>
+      <p className='text-slate-500 mt-2'>{song.name}</p>
+      <p className='text-slate-500'>
+        {song.singer}
+        <span className=' text-slate-900 font-bold'> Views:{song.views}</span>
+      </p>
     </div>
   )
 }

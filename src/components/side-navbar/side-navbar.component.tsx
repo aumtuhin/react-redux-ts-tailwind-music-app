@@ -7,22 +7,22 @@ const SideNavbar = () => {
         <div className='fixed w-40 text-center h-full'>
             <ul className="">
                 <li className="m-4 mt-10">
-                    <Link to="/"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 duration-200" icon={faHome} /></Link >
+                    <Link to="/"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faHome} /></Link >
                 </li>
                 <li className="m-4 mt-10">
-                    <Link to="/explore"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 duration-200" icon={faMusic} /></Link >
+                    <Link to="/explore"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faMusic} /></Link >
                 </li>
                 <li className="m-4 mt-10">
-                    <Link to="/trends"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 duration-200" icon={faChartArea} /></Link >
+                    <Link to="/trends"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faChartArea} /></Link >
                 </li>
                 <li className="m-4 mt-10">
-                    <Link to="/feed"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 duration-200" icon={faFeed} /></Link >
+                    <Link to="/feed"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faFeed} /></Link >
                 </li>
                 <li className="m-4 mt-10">
-                    <Link to="/saved-albums"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 duration-200" icon={faStar} /></Link >
+                    <Link to="/saved-albums"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faStar} /></Link >
                 </li>
                 <li className="m-4 mt-10">
-                    <Link to="/favorites"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 duration-200" icon={faHeart} /></Link >
+                    <Link to="/favorites"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-500" icon={faHeart} /></Link >
                 </li>
             </ul>
         </div>

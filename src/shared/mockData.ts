@@ -35,6 +35,30 @@ export const data: SongGroup[] = [
                 views: '100k',
                 mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
                 thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
+            },
+            {
+                name: 'Summer of 69',
+                singer: 'Brayan Adams',
+                album: 'Solo',
+                views: '100k',
+                mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
+            },
+            {
+                name: 'Summer of 69',
+                singer: 'Brayan Adams',
+                album: 'Solo',
+                views: '100k',
+                mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
+            },
+            {
+                name: 'Summer of 69',
+                singer: 'Brayan Adams',
+                album: 'Solo',
+                views: '100k',
+                mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
             }
         ]
     },
@@ -44,6 +68,14 @@ export const data: SongGroup[] = [
         songs: [
             {
                 name: 'Summer of 69 (Classic)',
+                singer: 'Brayan Adams',
+                album: 'Solo',
+                views: '100k',
+                mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
+            },
+            {
+                name: 'Summer of 69',
                 singer: 'Brayan Adams',
                 album: 'Solo',
                 views: '100k',
@@ -110,6 +142,14 @@ export const data: SongGroup[] = [
                 views: '100k',
                 mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
                 thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
+            },
+            {
+                name: 'Summer of 69',
+                singer: 'Brayan Adams',
+                album: 'Solo',
+                views: '100k',
+                mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
             }
         ]
     },
@@ -119,6 +159,14 @@ export const data: SongGroup[] = [
         songs: [
             {
                 name: 'Summer of 69 (Classic)',
+                singer: 'Brayan Adams',
+                album: 'Solo',
+                views: '100k',
+                mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg'
+            },
+            {
+                name: 'Summer of 69',
                 singer: 'Brayan Adams',
                 album: 'Solo',
                 views: '100k',
