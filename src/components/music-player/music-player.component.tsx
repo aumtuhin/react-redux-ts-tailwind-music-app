@@ -49,7 +49,7 @@ const MusicPlayer = () => {
     }
 
     const getCurrentDuration = () => {
-        if(audioPlayer.current.currentTime === audioPlayer.current.duration ) pause();
+        if (audioPlayer.current.currentTime === audioPlayer.current.duration) pause();
         setCurrentRangeVlaue(audioPlayer.current.currentTime);
         const currentTime = calculateTime(audioPlayer.current.currentTime);
         setCurrentDuration(currentTime);
@@ -83,11 +83,19 @@ const MusicPlayer = () => {
     }
 
     return (
-        <div className="bottom-0 fixed h-20 bg-purple-500 w-screen">
+        <div className="bottom-0 fixed h-24 bg-purple-500 w-screen">
             <div className='absolute w-scree'>
                 <input
                     type="range"
-                    className="absolute h-1 appearance-none bg-slate-700 outline-none w-screen cursor-pointer"
+                    className="absolute 
+                    h-1 hover:h-2 
+                    transition-all 
+                    duration-200 
+                    appearance-none
+                  bg-slate-700
+                    outline-none 
+                    w-screen 
+                    cursor-pointer"
                     id="customRange1"
                     value={currentRangeValue}
                     max={duration}
@@ -104,6 +112,8 @@ const MusicPlayer = () => {
                 <div className='flex items-center gap-3'>
                     <div className='h-14 w-20 flex justify-center items-center'>
                         <img className='h-14 w-20 object-cover rounded' src={currentSong.thumb} alt="thumb" />
+                        <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+                        </svg>
                     </div>
                     <button>
                         <FontAwesomeIcon className=' text-white h-4' icon={faBackward} />
