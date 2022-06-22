@@ -32,7 +32,7 @@ export const data: SongGroup[] = [
                 album: 'Solo',
                 views: '100k',
                 mp3Url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
-                thumb: 'https://i.scdn.co/image/ab67706f00000003aa9142d38243f6211304aa22'
+                thumb: 'https://cdns-images.dzcdn.net/images/artist/e65d62ecd00b8bf1ba89073943ac62a1/500x500.jpg'
             },
             {
                 id: 4,
