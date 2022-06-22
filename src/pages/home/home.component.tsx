@@ -4,7 +4,7 @@ import { data } from '../../shared/mockData';
 
 const Home = () => {
   return (
-    <div className='ml-40 pb-40'>
+    <div className='ml-20 sm:ml-40 sm:pb-40'>
       {data.map((item: SongGroup, index: number) => (
         <ContentGroup songGroup={item} key={index} />
       ))}
