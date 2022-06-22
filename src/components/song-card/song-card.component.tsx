@@ -4,7 +4,6 @@ import { Song } from '../../shared/interfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators, State } from '../../state';
-import { useEffect, useState } from 'react';
 
 const SongCard: React.FC<{ song: Song }> = ({ song }) => {
   const dispatch = useDispatch();
