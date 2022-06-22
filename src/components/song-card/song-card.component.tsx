@@ -1,19 +1,50 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { Song } from '../../shared/interfaces';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { actionCreators } from '../../state';
+import { actionCreators, State } from '../../state';
+import { useEffect, useState } from 'react';
 
 const SongCard: React.FC<{ song: Song }> = ({ song }) => {
   const dispatch = useDispatch();
-  const { setLikedSongs } = bindActionCreators(actionCreators, dispatch);
+  const { setLikedSongs, setCurrentSong, setIsPlaying } = bindActionCreators(actionCreators, dispatch);
+  const { currentSong, isPlaying } = useSelector((state: State) => state.music);
+  const likedSongs = useSelector((state: State) => state.likedSongs);
+
+  const handleCurrentSong = (song: Song) => {
+    if (song.id === currentSong.id && isPlaying) {
+      setIsPlaying(false);
+    } else if (song.id === currentSong.id && !isPlaying) {
+      setIsPlaying(true);
+    }
+    else {
+      setCurrentSong(song);
+    }
+  }
+
   return (
     <div className='h-56 w-56 transform transition duration-500 hover:scale-110'>
       <div
         style={{ backgroundImage: `url(${song.thumb})` }}
         className="bg-no-repeat bg-cover h-full w-full rounded-lg cursor-pointer"
       >
+        {likedSongs.songs.includes(song) &&
+          <FontAwesomeIcon
+            onClick={() => setLikedSongs(song)}
+            className='
+           absolute 
+         text-slate-600
+           h-7 m-2 
+           transition 
+           ease-in-in
+           ease-in-out  
+           delay-500 hover:h-8  
+           hover:scale-3
+           duration-700
+           z-10'
+            icon={faHeart}
+          />}
         <FontAwesomeIcon
           onClick={() => setLikedSongs(song)}
           className='
@@ -30,7 +61,20 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
           icon={faHeart}
         />
         <div className='absolute flex items-center justify-center w-full h-full'>
-          <FontAwesomeIcon
+          {currentSong.id === song.id && isPlaying && <FontAwesomeIcon
+            onClick={() => handleCurrentSong(song)}
+            className='text-white 
+            h-10 items-center 
+            justify-center 
+            transition 
+            ease-in-out 
+            delay-500 hover:h-14  
+            hover:scale-11 
+            duration-700'
+            icon={faPauseCircle}
+          />}
+          {currentSong.id === song.id && !isPlaying && <FontAwesomeIcon
+            onClick={() => handleCurrentSong(song)}
             className='text-white 
             h-10 items-center 
             justify-center 
@@ -40,7 +84,19 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
             hover:scale-11 
             duration-700'
             icon={faPlayCircle}
-          />
+          />}
+          {currentSong.id !== song.id && <FontAwesomeIcon
+            onClick={() => handleCurrentSong(song)}
+            className='text-white 
+            h-10 items-center 
+            justify-center 
+            transition 
+            ease-in-out 
+            delay-500 hover:h-14  
+            hover:scale-11 
+            duration-700'
+            icon={faPlayCircle}
+          />}
         </div>
       </div>
       <p className='text-slate-500 mt-2'>{song.name}</p>

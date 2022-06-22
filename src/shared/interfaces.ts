@@ -1,10 +1,12 @@
 export interface SongGroup {
     name: string,
-    songs: Song[]
+    songs: Song[],
 }
 
 export interface Song {
+    id: number,
     name: string,
+    playlist: string,
     singer: string,
     album: string,
     views: string,

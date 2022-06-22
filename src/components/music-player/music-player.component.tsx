@@ -1,31 +1,46 @@
 import { faBackward, faCirclePause, faForward, faPlayCircle, faVolumeHigh, faVolumeOff } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators, State } from '../../state';
 
 const MusicPlayer = () => {
+    const dispatch = useDispatch();
+    const { setIsPlaying } = bindActionCreators(actionCreators, dispatch);
+    const {isPlaying, currentSong } = useSelector((state: State) => state.music);
     const [isVolumeOff, setIsVolumeOff] = useState<boolean>(false);
-    const [isPlaying, setIsPlaying] = useState<boolean>(false);
-    const [currentSong, setCurrentSong] = useState<string>('');
     const [duration, setDuration] = useState<number>(0);
     const audioPlayer = useRef() as MutableRefObject<HTMLAudioElement>;
 
     useEffect(() => {
-        setCurrentSong('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
-        const time = audioPlayer.current.duration;
-        if (!time) {
-            setDuration(0);
-        } else {
-            setDuration(time);
+        if (isPlaying) {
+            play();
+            setIsPlaying(true);
+        } if(!isPlaying) {
+            pause();
+            setIsPlaying(false);
         }
-    }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentSong, isPlaying]);
+
+    const play = async () => {
+        await audioPlayer.current.play();
+        const time = Math.round(audioPlayer.current.duration);
+        setDuration(time);
+    }
+
+    const pause = () => {
+        audioPlayer.current.pause();
+    }
 
     const togglePlay = () => {
         if (audioPlayer.current.paused) {
-            audioPlayer.current.play();
-            setIsPlaying(() => true);
+            play();
+            setIsPlaying(true);
         } else {
             audioPlayer.current.pause();
-            setIsPlaying(() => false);
+            setIsPlaying(false);
         }
     }
 
@@ -39,7 +54,7 @@ const MusicPlayer = () => {
                 />
             </div>
             <div className='sm:px-16 flex flex-row justify-center items-center w-full h-full gap-8'>
-                <audio src={currentSong} preload="metadata" ref={audioPlayer} />
+                {currentSong && <audio src={currentSong.mp3Url} preload="metadata" ref={audioPlayer} />}
                 <div className='flex items-center gap-3'>
                     <img className='h-14 rounded' src="http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg" alt="thumb" />
                     <button>
