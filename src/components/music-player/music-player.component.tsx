@@ -139,7 +139,7 @@ const MusicPlayer = () => {
                     </button>
                 </div>
                 <div className='flex justify-center items-center'>
-                    <div className='text-white text-[16px]'>{currentDuration ? currentDuration : '00:00'}/{calculateTime(duration) ? calculateTime(duration) : '00:00'}</div>
+                    <div className='text-white text-[16px]'>{currentDuration ? currentDuration : '00:00'} / {calculateTime(duration) ? calculateTime(duration) : '00:00'}</div>
                     <div className='flex justify-center items-center gap-1'>
                         <button onClick={handleMute} className="w-12 h-12">
                             {isVolumeOff && <FontAwesomeIcon className='ml-3 text-white h-5' icon={faVolumeMute} />}
