@@ -113,15 +113,29 @@ const MusicPlayer = () => {
                     <div className='h-14 w-20 flex justify-center items-center'>
                         <img className='h-14 w-20 object-cover rounded' src={currentSong.thumb} alt="thumb" />
                     </div>
-                    <button onClick={prevSong}>
-                        <FontAwesomeIcon className=' text-white h-4' icon={faBackward} />
+                    <button className='w-6' onClick={prevSong}>
+                        <FontAwesomeIcon
+                            className='text-white h-4 transition 
+                            ease-in-out 
+                            delay-500 hover:h-5  
+                            hover:scale-11 
+                            duration-700'
+                            icon={faBackward}
+                        />
                     </button>
                     <button onClick={togglePlay} >
                         {!isPlaying && <FontAwesomeIcon className=' text-white h-10' icon={faPlayCircle} />}
                         {isPlaying && <FontAwesomeIcon className=' text-white h-10' icon={faCirclePause} />}
                     </button>
-                    <button onClick={nextSong} >
-                        <FontAwesomeIcon className=' text-white h-4' icon={faForward} />
+                    <button className='w-6' onClick={nextSong} >
+                        <FontAwesomeIcon
+                            className='text-white h-4 transition 
+                            ease-in-out 
+                            delay-500 hover:h-5  
+                            hover:scale-11 
+                            duration-700'
+                            icon={faForward}
+                        />
                     </button>
                 </div>
                 <div className='flex justify-center items-center'>
