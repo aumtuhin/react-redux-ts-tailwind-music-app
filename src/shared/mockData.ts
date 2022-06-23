@@ -7,7 +7,7 @@ export const data: SongGroup[] = [
             {
                 id: 1,
                 name: 'SoundHelix-Song-1',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'Brayan Adams',
                 album: 'Solo',
                 views: '100k',
@@ -17,7 +17,7 @@ export const data: SongGroup[] = [
             {
                 id: 2,
                 name: 'SoundHelix-Song-2',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'Pink Floyd',
                 album: 'Solo',
                 views: '100k',
@@ -27,7 +27,7 @@ export const data: SongGroup[] = [
             {
                 id: 3,
                 name: 'SoundHelix-Song-3',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'Cold Play',
                 album: 'Solo',
                 views: '100k',
@@ -37,7 +37,7 @@ export const data: SongGroup[] = [
             {
                 id: 4,
                 name: 'SoundHelix-Song-4',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'The Weekend',
                 album: 'Solo',
                 views: '100k',
@@ -47,7 +47,7 @@ export const data: SongGroup[] = [
             {
                 id: 5,
                 name: 'SoundHelix-Song-5',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'Passenger',
                 album: 'Solo',
                 views: '100k',
@@ -57,7 +57,7 @@ export const data: SongGroup[] = [
             {
                 id: 6,
                 name: 'SoundHelix-Song-6',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'Scorpions',
                 album: 'Solo',
                 views: '100k',
@@ -67,7 +67,7 @@ export const data: SongGroup[] = [
             {
                 id: 7,
                 name: 'SoundHelix-Song-7',
-                playlist: 'top',
+                playlist: 'Top Songs',
                 singer: 'Metalica',
                 album: 'Solo',
                 views: '100k',

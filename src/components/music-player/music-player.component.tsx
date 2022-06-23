@@ -7,7 +7,7 @@ import { actionCreators, State } from '../../state';
 
 const MusicPlayer = () => {
     const dispatch = useDispatch();
-    const { setIsPlaying } = bindActionCreators(actionCreators, dispatch);
+    const { setIsPlaying, nextSong, prevSong } = bindActionCreators(actionCreators, dispatch);
     const { isPlaying, currentSong } = useSelector((state: State) => state.music);
     const [isVolumeOff, setIsVolumeOff] = useState<boolean>(false);
     const [duration, setDuration] = useState<number>(0);
@@ -112,17 +112,15 @@ const MusicPlayer = () => {
                 <div className='flex items-center gap-3'>
                     <div className='h-14 w-20 flex justify-center items-center'>
                         <img className='h-14 w-20 object-cover rounded' src={currentSong.thumb} alt="thumb" />
-                        <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-                        </svg>
                     </div>
-                    <button>
+                    <button onClick={prevSong}>
                         <FontAwesomeIcon className=' text-white h-4' icon={faBackward} />
                     </button>
                     <button onClick={togglePlay} >
                         {!isPlaying && <FontAwesomeIcon className=' text-white h-10' icon={faPlayCircle} />}
                         {isPlaying && <FontAwesomeIcon className=' text-white h-10' icon={faCirclePause} />}
                     </button>
-                    <button>
+                    <button onClick={nextSong} >
                         <FontAwesomeIcon className=' text-white h-4' icon={faForward} />
                     </button>
                 </div>
@@ -135,7 +133,7 @@ const MusicPlayer = () => {
                         </button>
                         <input
                             type="range"
-                            className="h-1 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none cursor-pointer"
+                            className=" hidden sm:block h-1 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none cursor-pointer"
                             id="customRange1"
                             step={0.1}
                             value={volume}

@@ -39,3 +39,19 @@ export const setIsPlaying = (isPlaying: boolean) => {
     }
 }
 
+export const nextSong = () => {
+    return (dispatch: Dispatch<MusicAction>) => {
+        dispatch({
+            type: ActionType.NEXT_SONG
+        });
+    }
+}
+
+export const prevSong = () => {
+    return (dispatch: Dispatch<MusicAction>) => {
+        dispatch({
+            type: ActionType.PEV_SONG
+        });
+    }
+}
+

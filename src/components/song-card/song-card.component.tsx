@@ -1,14 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
-import { Song } from '../../shared/interfaces';
+import { AppState, Song } from '../../shared/interfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators, State } from '../../state';
 
 const SongCard: React.FC<{ song: Song }> = ({ song }) => {
   const dispatch = useDispatch();
-  const { setLikedSongs, setCurrentSong, setIsPlaying } = bindActionCreators(actionCreators, dispatch);
+  const { setLikedSongs, setCurrentPlaylist, setIsPlaying, setCurrentSong } = bindActionCreators(actionCreators, dispatch);
   const { currentSong, isPlaying } = useSelector((state: State) => state.music);
+  const products: AppState = useSelector((state: State) => state.products);
   const likedSongs = useSelector((state: State) => state.likedSongs);
 
   const handleCurrentSong = (song: Song) => {
@@ -19,6 +20,8 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
     }
     else {
       setCurrentSong(song);
+      const currentPlayList = products.products.filter(songGroup => songGroup.name === song.playlist);
+      setCurrentPlaylist(currentPlayList[0]);
     }
   }
 

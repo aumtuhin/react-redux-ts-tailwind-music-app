@@ -22,4 +22,12 @@ interface SetIsPlaying {
     payload: boolean
 }
 
-export type MusicAction = SetPlayList | SetCurrentSong | SetCurrentPlaylist | SetIsPlaying;
+interface NextSong {
+    type: ActionType.NEXT_SONG,
+}
+
+interface PrevSong {
+    type: ActionType.PEV_SONG,
+}
+
+export type MusicAction = SetPlayList | SetCurrentSong | SetCurrentPlaylist | SetIsPlaying | NextSong | PrevSong;
