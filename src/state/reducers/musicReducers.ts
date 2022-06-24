@@ -17,16 +17,14 @@ const musicReducer = (state = initialState, action: MusicAction) => {
                 ...state,
             }
         case ActionType.SET_CURRENT_PlAYLIST:
-            const currentPlayListSongs = action.payload.songs.filter((song) => {
-                return song.id !== state.currentSong.id;
-            });
+            state.currentSongIndex = action.payload.songs.indexOf(state.currentSong);
             state.curretPlayList = {
                 name: action.payload.name,
-                songs: [state.currentSong, ...currentPlayListSongs]
+                songs: action.payload.songs
             };
             return {
                 ...state,
-                currentSong: state.curretPlayList.songs[0],
+                currentSong: state.curretPlayList.songs[state.currentSongIndex],
                 isPlaying: true,
             }
         case ActionType.NEXT_SONG:

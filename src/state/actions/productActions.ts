@@ -1,4 +1,4 @@
-import { Song, SongGroup } from "../../shared/interfaces";
+import { SongGroup } from "../../shared/interfaces";
 import { ActionType } from "../action-types";
 
 interface SetProducts {
@@ -11,10 +11,4 @@ interface SortProducts {
     payload: SongGroup[]
 }
 
-interface SetLikedSongs {
-    type: ActionType.SET_LIKED_SONG,
-    payload: Song
-}
-
-export type ProductAction = SetProducts | SortProducts | SetLikedSongs;
-export type LikedSongAction = SetLikedSongs;
+export type ProductAction = SetProducts | SortProducts;

@@ -1,14 +1,23 @@
 import { combineReducers } from "redux";
 import productReducer from "./productReducer";
-import likedSongReducer from './likedSongReducer';
 import musicReducer from './musicReducers';
+import storage from 'redux-persist/es/storage';
+import { persistReducer } from 'redux-persist';
+import favouritemMusicReducer from './favouriteMusicReducers';
+
 
 const reducers = combineReducers({
     products: productReducer,
-    likedSongs: likedSongReducer,
     music: musicReducer,
+    favouriteMusic: favouritemMusicReducer
 });
 
-export default reducers;
+const rootPersistConfig = {
+    key: 'root',
+    storage: storage,
+    whitelist: ['favouriteMusic']
+};
+
+export default persistReducer(rootPersistConfig, reducers);
 
 export type State = ReturnType<typeof reducers>

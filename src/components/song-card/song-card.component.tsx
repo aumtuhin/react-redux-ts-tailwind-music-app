@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { AppState, Song } from '../../shared/interfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -7,10 +7,10 @@ import { actionCreators, State } from '../../state';
 
 const SongCard: React.FC<{ song: Song }> = ({ song }) => {
   const dispatch = useDispatch();
-  const { setLikedSongs, setCurrentPlaylist, setIsPlaying, setCurrentSong } = bindActionCreators(actionCreators, dispatch);
+  const { setCurrentPlaylist, setIsPlaying, setCurrentSong } = bindActionCreators(actionCreators, dispatch);
   const { currentSong, isPlaying } = useSelector((state: State) => state.music);
+  // const { favouriteMusic } = useSelector((state: State) => state.favouriteMusic);
   const products: AppState = useSelector((state: State) => state.products);
-  const likedSongs = useSelector((state: State) => state.likedSongs);
 
   const handleCurrentSong = (song: Song) => {
     if (song.id === currentSong.id && isPlaying) {
@@ -31,24 +31,7 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
         style={{ backgroundImage: `url(${song.thumb})` }}
         className="bg-no-repeat bg-cover h-full w-full rounded-lg cursor-pointer"
       >
-        {likedSongs.songs.includes(song) &&
-          <FontAwesomeIcon
-            onClick={() => setLikedSongs(song)}
-            className='
-           absolute 
-         text-slate-600
-           h-7 m-2 
-           transition 
-           ease-in-in
-           ease-in-out  
-           delay-500 hover:h-8  
-           hover:scale-3
-           duration-700
-           z-10'
-            icon={faHeart}
-          />}
-        <FontAwesomeIcon
-          onClick={() => setLikedSongs(song)}
+        {/* <FontAwesomeIcon
           className='
            absolute 
           text-white
@@ -61,7 +44,7 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
            duration-700
            z-10'
           icon={faHeart}
-        />
+        /> */}
         <div className='absolute flex items-center justify-center w-full h-full'>
           {currentSong.id === song.id && isPlaying && <FontAwesomeIcon
             onClick={() => handleCurrentSong(song)}

@@ -30,4 +30,9 @@ interface PrevSong {
     type: ActionType.PEV_SONG,
 }
 
-export type MusicAction = SetPlayList | SetCurrentSong | SetCurrentPlaylist | SetIsPlaying | NextSong | PrevSong;
+interface SetFavouriteSongs {
+    type: ActionType.ADD_FAVOURITE_SONG,
+    payload: Song
+}
+
+export type MusicAction = SetPlayList | SetCurrentSong | SetCurrentPlaylist | SetIsPlaying | NextSong | PrevSong | SetFavouriteSongs;

@@ -55,3 +55,12 @@ export const prevSong = () => {
     }
 }
 
+export const addFavouriteSong = (song: Song) => {
+    return (dispatch: Dispatch<MusicAction>) => {
+        dispatch({
+            type: ActionType.ADD_FAVOURITE_SONG,
+            payload: song
+        });
+    }
+}
+
