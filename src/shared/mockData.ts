@@ -77,12 +77,12 @@ export const data: SongGroup[] = [
         ]
     },
     {
-        name: 'Favorite Songs',
+        name: 'Most Popular Songs',
         songs: [
             {
                 id: 8,
                 name: 'SoundHelix-Song-1',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'Brayan Adams',
                 album: 'Solo',
                 views: '100k',
@@ -92,7 +92,7 @@ export const data: SongGroup[] = [
             {
                 id: 9,
                 name: 'SoundHelix-Song-2',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'Pink Floyd',
                 album: 'Solo',
                 views: '100k',
@@ -102,7 +102,7 @@ export const data: SongGroup[] = [
             {
                 id: 10,
                 name: 'SoundHelix-Song-3',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'Cold Play',
                 album: 'Solo',
                 views: '100k',
@@ -112,7 +112,7 @@ export const data: SongGroup[] = [
             {
                 id: 11,
                 name: 'SoundHelix-Song-4',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'The Weekend',
                 album: 'Solo',
                 views: '100k',
@@ -122,7 +122,7 @@ export const data: SongGroup[] = [
             {
                 id: 12,
                 name: 'SoundHelix-Song-5',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'Passenger',
                 album: 'Solo',
                 views: '100k',
@@ -132,7 +132,7 @@ export const data: SongGroup[] = [
             {
                 id: 13,
                 name: 'SoundHelix-Song-6',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'Scorpions',
                 album: 'Solo',
                 views: '100k',
@@ -142,7 +142,7 @@ export const data: SongGroup[] = [
             {
                 id: 14,
                 name: 'SoundHelix-Song-7',
-                playlist: 'Favorite Songs',
+                playlist: 'Most Popular Songs',
                 singer: 'Metalica',
                 album: 'Solo',
                 views: '100k',

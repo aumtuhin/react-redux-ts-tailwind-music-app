@@ -18,17 +18,14 @@ const musicReducer = (state = initialState, action: MusicAction) => {
             }
         case ActionType.SET_CURRENT_PlAYLIST:
             state.currentSongIndex = action.payload.songs.indexOf(state.currentSong);
-            state.curretPlayList = {
-                name: action.payload.name,
-                songs: action.payload.songs
-            };
+            state.curretPlayList = action.payload;
             return {
                 ...state,
                 currentSong: state.curretPlayList.songs[state.currentSongIndex],
                 isPlaying: true,
             }
         case ActionType.NEXT_SONG:
-            state.currentSongIndex = state.currentSongIndex + 1;
+            state.currentSongIndex += 1;
             if (state.currentSongIndex > state.curretPlayList.songs.length - 1) {
                 state.currentSongIndex = state.curretPlayList.songs.length - 1;
             }
@@ -42,7 +39,7 @@ const musicReducer = (state = initialState, action: MusicAction) => {
             if (state.currentSongIndex === 0) {
                 state.currentSongIndex = 0;
             } else {
-                state.currentSongIndex = state.currentSongIndex - 1;
+                state.currentSongIndex -= 1;
             }
             return {
                 ...state,
