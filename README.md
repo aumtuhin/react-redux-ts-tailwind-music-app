@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with The App
 
 ![App](./docs/imgs/home.png)
 
