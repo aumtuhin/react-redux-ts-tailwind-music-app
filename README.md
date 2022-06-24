@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-<img src="./docs/imgs/home.png"  width=50% height=50%>
+![App](./docs/imgs/home.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
