@@ -10,9 +10,6 @@ const TopNavbar = () => {
       <div className="pl-10 pr-10 h-full w-full  flex justify-between items-center">
         <Link to="/" ><img className="h-20" src={logo} alt="logo" /></Link>
         <SearchInput />
-        <div className='absolute h-80 w-90 m-0-auto bg-slate-500'>
-          results
-        </div>
         <ToggleButton />
       </div>
     </div>
