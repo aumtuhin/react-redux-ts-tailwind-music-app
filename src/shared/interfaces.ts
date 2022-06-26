@@ -11,14 +11,10 @@ export interface Song {
     album: string,
     views: string,
     mp3Url: string,
-    thumb: string
+    thumb: string,
+    liked: boolean,
 }
 
 export interface AppState {
     products: SongGroup[],
-}
-
-export interface LikedSong {
-    name: string
-    songs: Song[]
 }

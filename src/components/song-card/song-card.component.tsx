@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { AppState, Song } from '../../shared/interfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -26,13 +26,18 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
     }
   }
 
+  const handleFavouriteSong = (song: Song) => {
+    console.log(song);
+  }
+
   return (
     <div className='h-56 w-56 transform transition duration-500 hover:scale-110'>
       <div
         style={{ backgroundImage: `url(${song.thumb})` }}
         className="bg-no-repeat bg-cover h-full w-full rounded-lg cursor-pointer"
       >
-        {/* <FontAwesomeIcon
+        <FontAwesomeIcon
+          onClick={() => handleFavouriteSong(song)}
           className='
            absolute 
           text-white
@@ -45,7 +50,7 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
            duration-700
            z-10'
           icon={faHeart}
-        /> */}
+        />
         <div className='absolute flex items-center justify-center w-full h-full'>
           {currentSong.id === song.id && isPlaying && <FontAwesomeIcon
             onClick={() => handleCurrentSong(song)}
