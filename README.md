@@ -5,7 +5,7 @@
 ![App](./docs/imgs/home.png)
 
 ### Dark View
-![App](./docs/imgs/home.png)
+![App](./docs/imgs/home-dark.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
