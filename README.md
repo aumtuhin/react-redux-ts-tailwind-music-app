@@ -4,6 +4,9 @@
 
 ![App](./docs/imgs/home.png)
 
+### Dark View
+![App](./docs/imgs/home.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
