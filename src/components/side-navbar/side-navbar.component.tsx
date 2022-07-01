@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SideNavbar = () => {
     return (
-        <div className='fixed w-10 sm:w-40 text-center h-full dark:bg-slate-900'>
+        <div className='fixed w-20 sm:w-40 text-center h-full dark:bg-slate-900'>
             <ul className="">
                 <li className="m-4 mt-10">
                     <Link to="/"><FontAwesomeIcon className="h-6 text-slate-500 hover:text-slate-800 transition-all duration-100 dark:hover:text-white" icon={faHome} /></Link >

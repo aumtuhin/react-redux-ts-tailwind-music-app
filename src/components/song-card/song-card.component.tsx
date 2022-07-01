@@ -93,7 +93,7 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
       <p className='text-slate-500 mt-2'>{song.name}</p>
       <p className='text-slate-500'>
         {song.singer}
-        <span className=' text-slate-900 font-bold'> Views:{song.views}</span>
+        <span className=' text-slate-900 font-bold dark:text-slate-400'> Views:{song.views}</span>
       </p>
     </div>
   )
