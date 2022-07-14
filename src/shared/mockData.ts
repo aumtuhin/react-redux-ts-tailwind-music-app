@@ -22,7 +22,7 @@ export const data: SongGroup[] = [
                 singer: 'Pink Floyd',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/6d94a97e19b7850916bfcceecec5cefa.mp3',
                 thumb: 'https://pbs.twimg.com/media/Eot6pFSW8AARv0s.jpg',
                 liked: false
             },
@@ -33,7 +33,7 @@ export const data: SongGroup[] = [
                 singer: 'Cold Play',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/4536a26aa07cb8a03112280420aedce5.mp3',
                 thumb: 'https://cdns-images.dzcdn.net/images/artist/e65d62ecd00b8bf1ba89073943ac62a1/500x500.jpg',
                 liked: false
             },
@@ -44,7 +44,7 @@ export const data: SongGroup[] = [
                 singer: 'The Weekend',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/5725af086f095a23a833e56f9e1883da.mp3',
                 thumb: 'https://static.independent.co.uk/2020/11/23/11/newFile-1.jpg?quality=75&width=982&height=726&auto=webp',
                 liked: false
             },
@@ -66,7 +66,7 @@ export const data: SongGroup[] = [
                 singer: 'Scorpions',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/8844c05a66ec5b44040f4706419c4f59.mp3',
                 thumb: 'http://classicrock.net/wp-content/uploads/2018/02/scorpions-promo-2015-min-e1527249069491.jpg',
                 liked: false
             },
@@ -77,7 +77,7 @@ export const data: SongGroup[] = [
                 singer: 'Metalica',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/df60b455debe6df6edc6020206f7ade8.mp3',
                 thumb: 'https://metalitalia.com/wp-content/uploads/2021/06/METALIA-Colpisci-700x700.jpg',
                 liked: false
             }
@@ -93,7 +93,7 @@ export const data: SongGroup[] = [
                 singer: 'Brayan Adams',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/8a27092db307d35c527f7c05d7f42602.mp3',
                 thumb: 'http://www.laut.de/Bryan-Adams/bryan-adams-216203.jpg',
                 liked: false
             },
@@ -104,7 +104,7 @@ export const data: SongGroup[] = [
                 singer: 'Pink Floyd',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/4d6f8b60e85b2d6ca1b859eac1e26d31.mp3',
                 thumb: 'https://pbs.twimg.com/media/Eot6pFSW8AARv0s.jpg',
                 liked: false
             },
@@ -115,7 +115,7 @@ export const data: SongGroup[] = [
                 singer: 'Cold Play',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/da1862b0b5466dc1881cc0273212b431.mp3',
                 thumb: 'https://cdns-images.dzcdn.net/images/artist/e65d62ecd00b8bf1ba89073943ac62a1/500x500.jpg',
                 liked: false
             },
@@ -126,7 +126,7 @@ export const data: SongGroup[] = [
                 singer: 'The Weekend',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/e6b92aca2cbd59d2cba0af69568b5576.mp3',
                 thumb: 'https://static.independent.co.uk/2020/11/23/11/newFile-1.jpg?quality=75&width=982&height=726&auto=webp',
                 liked: false
             },
@@ -148,7 +148,7 @@ export const data: SongGroup[] = [
                 singer: 'Scorpions',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/24f4c3edec3f5568896b77aca1ccb36c.mp3',
                 thumb: 'http://classicrock.net/wp-content/uploads/2018/02/scorpions-promo-2015-min-e1527249069491.jpg',
                 liked: false
             },
@@ -159,7 +159,7 @@ export const data: SongGroup[] = [
                 singer: 'Metalica',
                 album: 'Solo',
                 views: '100k',
-                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/d98442220776810146f598611362c2c7.mp3',
+                mp3Url: 'https://tribeofnoisestorage.blob.core.windows.net/music/2be21f1f21635eea76cea47d19a27269.mp3',
                 thumb: 'https://metalitalia.com/wp-content/uploads/2021/06/METALIA-Colpisci-700x700.jpg',
                 liked: false
             }

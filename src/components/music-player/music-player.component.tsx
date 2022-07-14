@@ -13,7 +13,7 @@ const MusicPlayer = () => {
     const [duration, setDuration] = useState<number>(0);
     const [currentDuration, setCurrentDuration] = useState<String>('');
     const [currentRangeValue, setCurrentRangeVlaue] = useState<number>(0);
-    const [volume, setVolume] = useState<number>(0);
+    const [volume, setVolume] = useState<number>(.5);
     const audioPlayer = useRef() as MutableRefObject<HTMLAudioElement>;
 
     useEffect(() => {
@@ -151,6 +151,7 @@ const MusicPlayer = () => {
                             id="customRange1"
                             step={0.1}
                             value={volume}
+                            min={0}
                             max={1}
                             onChange={handleVolume}
                         />
