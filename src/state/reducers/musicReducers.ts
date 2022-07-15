@@ -1,10 +1,11 @@
 import { MusicAction } from "../actions";
 import { ActionType } from "../action-types";
 import { Song, SongGroup } from '../../shared/interfaces';
+import { data } from '../../shared/mockData';
 
 const initialState = {
-    currentSong: {} as Song,
-    curretPlayList: {} as SongGroup,
+    currentSong: data[0].songs[0] as Song,
+    curretPlayList: data[0] as SongGroup,
     isPlaying: false,
     currentSongIndex: 0,
 }
@@ -35,7 +36,6 @@ const musicReducer = (state = initialState, action: MusicAction) => {
                 isPlaying: true,
             }
         case ActionType.PEV_SONG:
-            console.log(state.currentSongIndex);
             if (state.currentSongIndex === 0) {
                 state.currentSongIndex = 0;
             } else {

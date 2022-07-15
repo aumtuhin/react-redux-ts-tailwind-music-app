@@ -7,7 +7,7 @@ const Home = () => {
   const products:AppState = useSelector((state: State) => state.products);
   console.log(products);
   return (
-    <div className='ml-20 sm:ml-40 sm:pb-40 dark:bg-slate-900'>
+    <div className='ml-20 sm:ml-40 sm:pb-40 w-full dark:bg-slate-900'>
       {products.products.map((item: SongGroup, index: number) => (
       <ContentGroup songGroup={item} key={index} />
       ))}

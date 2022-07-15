@@ -1,6 +1,7 @@
 import { faBackward, faCirclePause, faForward, faPlayCircle, faVolumeHigh, faVolumeMute } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, MutableRefObject, useEffect, useRef, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators, State } from '../../state';
@@ -15,6 +16,7 @@ const MusicPlayer = () => {
     const [currentRangeValue, setCurrentRangeVlaue] = useState<number>(0);
     const [volume, setVolume] = useState<number>(.5);
     const audioPlayer = useRef() as MutableRefObject<HTMLAudioElement>;
+    const history = useNavigate();
 
     useEffect(() => {
         if (isPlaying) {
@@ -82,6 +84,10 @@ const MusicPlayer = () => {
         if (currentVolume === 0) setIsVolumeOff(true);
     }
 
+    const navigate = () => {
+        history('/current-playlist');
+    }
+
     return (
         <div className="bottom-0 fixed h-24 bg-purple-500 w-screen">
             <div className='absolute w-scree'>
@@ -110,7 +116,7 @@ const MusicPlayer = () => {
                         onTimeUpdate={getCurrentDuration}
                     />}
                 <div className='flex items-center gap-3'>
-                    <div className='h-14 w-20 flex justify-center items-center'>
+                    <div className='h-14 w-20 flex justify-center items-center cursor-pointer' onClick={navigate}>
                         <img className='h-14 w-20 object-cover rounded' src={currentSong.thumb} alt="thumb" />
                     </div>
                     <button className='w-6' onClick={prevSong}>
