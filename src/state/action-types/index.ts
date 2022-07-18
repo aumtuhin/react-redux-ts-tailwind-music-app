@@ -1,7 +1,8 @@
 export enum ActionType {
     SET_PRODUCT = 'set_product',
     SORT_PRODUCT = 'sort_product',
-    ADD_FAVOURITE_SONG = 'set_favourite_song',
+    ADD_FAVOURITE_SONG = 'add_favourite_song',
+    REMOVE_FAVOURITE_SONG = 'remove_favourite_song',
     SET_PlAYLIST = 'set_playlist',
     SET_CURRENT_SONG = 'set_current_song',
     SET_CURRENT_SONG_INDEX = 'set_current_song_index',

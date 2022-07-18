@@ -5,7 +5,7 @@ import { State } from '../../state';
 const FavouriteSongs = () => {
     const { favouriteMusic } = useSelector((state: State) => state.favouriteMusic);
     return (
-        <div className='ml-20 sm:ml-40 sm:pb-40'>
+        <div className='ml-20 sm:ml-40 sm:pb-40 w-full h-screen dark:bg-slate-900'>
             <ContentGroup songGroup={favouriteMusic} />
         </div>
     )

@@ -35,9 +35,14 @@ interface SetCurrentSongSongIndex {
     payload: number
 }
 
-interface SetFavouriteSongs {
+interface AddFavouriteSongs {
     type: ActionType.ADD_FAVOURITE_SONG,
     payload: Song
 }
 
-export type MusicAction = SetPlayList | SetCurrentSong | SetCurrentPlaylist | SetIsPlaying | NextSong | PrevSong | SetFavouriteSongs | SetCurrentSongSongIndex;
+interface RemoveFavouriteSongs {
+    type: ActionType.REMOVE_FAVOURITE_SONG,
+    payload: Song
+}
+
+export type MusicAction = SetPlayList | SetCurrentSong | SetCurrentPlaylist | SetIsPlaying | NextSong | PrevSong | AddFavouriteSongs | SetCurrentSongSongIndex | RemoveFavouriteSongs;

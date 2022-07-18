@@ -18,12 +18,14 @@ const musicReducer = (state = initialState, action: MusicAction) => {
                 currentSong: state.currentSong
             }
         case ActionType.SET_CURRENT_PlAYLIST:
-            state.currentSongIndex = action.payload.songs.indexOf(state.currentSong);
+            const index = action.payload.songs.indexOf(state.currentSong);
+            if (index > -1) {
+                state.currentSongIndex = index;
+            }
             state.curretPlayList = action.payload;
             return {
                 ...state,
-                currentSong: state.curretPlayList.songs[state.currentSongIndex],
-                isPlaying: true,
+                curretPlayList: state.curretPlayList
             }
         case ActionType.SET_CURRENT_SONG_INDEX:
             state.currentSongIndex = action.payload;

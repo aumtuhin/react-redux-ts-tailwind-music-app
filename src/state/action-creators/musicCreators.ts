@@ -73,3 +73,12 @@ export const addFavouriteSong = (song: Song) => {
     }
 }
 
+export const removeFavouriteSong = (song: Song) => {
+    return (dispatch: Dispatch<MusicAction>) => {
+        dispatch({
+            type: ActionType.REMOVE_FAVOURITE_SONG,
+            payload: song
+        });
+    }
+}
+
