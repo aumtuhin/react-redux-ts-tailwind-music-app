@@ -1,11 +1,10 @@
 import { MusicAction } from "../actions";
 import { ActionType } from "../action-types";
 import { Song, SongGroup } from '../../shared/interfaces';
-import { data } from '../../shared/mockData';
 
 const initialState = {
-    currentSong: data[0].songs[0] as Song,
-    curretPlayList: data[0] as SongGroup,
+    currentSong: {} as Song,
+    curretPlayList: {} as SongGroup,
     isPlaying: false,
     currentSongIndex: 0,
 }
@@ -16,6 +15,7 @@ const musicReducer = (state = initialState, action: MusicAction) => {
             state.currentSong = action.payload;
             return {
                 ...state,
+                currentSong: state.currentSong
             }
         case ActionType.SET_CURRENT_PlAYLIST:
             state.currentSongIndex = action.payload.songs.indexOf(state.currentSong);
@@ -23,6 +23,13 @@ const musicReducer = (state = initialState, action: MusicAction) => {
             return {
                 ...state,
                 currentSong: state.curretPlayList.songs[state.currentSongIndex],
+                isPlaying: true,
+            }
+        case ActionType.SET_CURRENT_SONG_INDEX:
+            state.currentSongIndex = action.payload;
+            return {
+                ...state,
+                currentSongIndex: state.currentSongIndex,
                 isPlaying: true,
             }
         case ActionType.NEXT_SONG:

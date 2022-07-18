@@ -55,6 +55,15 @@ export const prevSong = () => {
     }
 }
 
+export const setCurrentSongIndex = (currentSongindex: number) => {
+    return (dispatch: Dispatch<MusicAction>) => {
+        dispatch({
+            type: ActionType.SET_CURRENT_SONG_INDEX,
+            payload: currentSongindex
+        });
+    }
+}
+
 export const addFavouriteSong = (song: Song) => {
     return (dispatch: Dispatch<MusicAction>) => {
         dispatch({

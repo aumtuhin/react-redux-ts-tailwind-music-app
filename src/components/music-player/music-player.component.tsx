@@ -1,4 +1,4 @@
-import { faBackward, faCirclePause, faForward, faPlayCircle, faVolumeHigh, faVolumeMute } from '@fortawesome/free-solid-svg-icons';
+import { faBackward, faCaretUp, faCirclePause, faForward, faPlayCircle, faVolumeHigh, faVolumeMute } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, MutableRefObject, useEffect, useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -116,7 +116,9 @@ const MusicPlayer = () => {
                         onTimeUpdate={getCurrentDuration}
                     />}
                 <div className='flex items-center gap-3'>
-                    <div className='h-14 w-20 flex justify-center items-center cursor-pointer' onClick={navigate}>
+                    <div className='h-14 w-20 flex justify-center items-center cursor-pointer gap-2' onClick={navigate}>
+                        <FontAwesomeIcon className='text-white h-6 transition' 
+                            icon={faCaretUp} />
                         <img className='h-14 w-20 object-cover rounded' src={currentSong.thumb} alt="thumb" />
                     </div>
                     <button className='w-6' onClick={prevSong}>

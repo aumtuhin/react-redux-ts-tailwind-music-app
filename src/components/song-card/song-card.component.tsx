@@ -22,6 +22,7 @@ const SongCard: React.FC<{ song: Song }> = ({ song }) => {
       setCurrentSong(song);
       const currentPlayList = products.products.filter(songGroup => songGroup.name === song.playlist);
       setCurrentPlaylist(currentPlayList[0]);
+      setIsPlaying(true);
     }
   }
 
