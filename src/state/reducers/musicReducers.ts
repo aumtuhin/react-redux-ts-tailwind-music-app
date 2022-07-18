@@ -37,7 +37,7 @@ const musicReducer = (state = initialState, action: MusicAction) => {
         case ActionType.NEXT_SONG:
             state.currentSongIndex += 1;
             if (state.currentSongIndex > state.curretPlayList.songs.length - 1) {
-                state.currentSongIndex = state.curretPlayList.songs.length - 1;
+                state.currentSongIndex = 0;
             }
             return {
                 ...state,
@@ -46,7 +46,7 @@ const musicReducer = (state = initialState, action: MusicAction) => {
             }
         case ActionType.PEV_SONG:
             if (state.currentSongIndex === 0) {
-                state.currentSongIndex = 0;
+                state.currentSongIndex = state.curretPlayList.songs.length - 1;
             } else {
                 state.currentSongIndex -= 1;
             }
